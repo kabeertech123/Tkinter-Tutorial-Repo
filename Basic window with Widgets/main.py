@@ -19,6 +19,10 @@ label.pack()
 text = tk.Text(master=window)
 text.pack()#places it in the middle top of the window
 
+# ttk entry 
+
+entry = ttk.Entry(master=window)
+entry.pack()
 
 # run 
 window.mainloop() # updates GUI and checks for events 
