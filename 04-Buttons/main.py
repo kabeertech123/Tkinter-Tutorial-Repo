@@ -19,7 +19,7 @@ btn.pack()
 
 #checkbutton
 
-check = ttk.Checkbutton(window, text='checkbox 1')
+check = ttk.Checkbutton(window, text='checkbox 1', command=lambda: print('hello'))
 check.pack()
 
 #1:11:35
