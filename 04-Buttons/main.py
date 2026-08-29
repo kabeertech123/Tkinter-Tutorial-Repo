@@ -18,8 +18,12 @@ btn = ttk.Button(window, text='A simple button', command=lambda:print('a basic b
 btn.pack()
 
 #checkbutton
-
-check = ttk.Checkbutton(window, text='checkbox 1', command=lambda: print('hello'))
+check_var = tk.StringVar()
+check = ttk.Checkbutton(   
+    window,
+    text='checkbox 1',
+    command=lambda: print(check_var.get()),
+    variable=check_var) # we don't use text variable because the var is not storing text but whether if the checkbox is checked
 check.pack()
 
 #1:11:35
