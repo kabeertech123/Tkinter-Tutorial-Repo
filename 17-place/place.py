@@ -25,13 +25,25 @@ style.configure('T', foreground="red")
 label1 = tk.Label(window, text="First label", background="red")
 label2 = tk.Label(window, text="2nd label", background="orange")
 label3 = tk.Label(window, text="3rd label", background="green")
-button = tk.Button(window, text="btn1")
+button = tk.Button(window, text="btn1", )
 
 # Pack the widgets
 #label1.place(x = 300, y = 100, width= 100, height= 200)
-#label2.place(relx=0.5, rely=5, relwidth=0.4, relheight=0.5)
-label3.place(x = 0.7 , y = 0.1, width= 0.1, height= 0.2)
-#button.place()
+label2.place(relx=0.2, rely=0.1, relwidth= 0.4, relheight=0.5)
+label3.place(x = 79, y = 60, width= 100, height= 200)
+button.place(relx=1, rely=1, anchor="se")# sets the pos of where the widget will be which is the bottom right
+
+# frame
+
+frame = ttk.Frame(window)
+frame_label = tk.Label(frame, text = 'Frame label', background='blue')
+frame_button = tk.Button(frame, text = 'Frame label')
+
+# layout
+frame.place(relx = 0, rely= 0, relwidth=0.3, relheight=1)
+frame_label.place(relx=0, rely=0, relwidth=1, relheight= 0.5)
+frame_button.place(relx = 0, rely=0.5, relwidth=1, relheight= 0.5)
+
 
 # Run the application
 window.mainloop()
